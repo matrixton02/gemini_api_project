@@ -1,4 +1,14 @@
+*{
+    background-color:#bbe6e4;
+}
+
+#heading{
+    text-align: center;
+    color:#084b83;
+}
+
 .container{
+    
     height:500px;
     display:flex;
     justify-content:center;
@@ -8,6 +18,22 @@
     
 }
 #code{
+    background-color:#f0f6f6;
     height:100%;
     width:50%;
+}
+
+.submit{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#sub{
+    height:50px;
+    width:100px;
+    background-color: #42bfdd;
+    border-radius:8px;
+    text-align:center;
+    font-size:15px;
 }
