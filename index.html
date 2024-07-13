@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
     <h2 id="heading">Time Complexity</h2>
     <div class="container">
         <textarea id="code" row="10">text here</textarea>
@@ -14,6 +21,6 @@
     <div class="submit">
         <button id="sub">Submit</button>
     </div>
-   
+   <script type="module" src="script.js"></script>
 </body>
 </html>

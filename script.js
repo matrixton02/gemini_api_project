@@ -1,44 +1,30 @@
-/*
- * Install the Generative AI SDK
- *
- * $ npm install @google/generative-ai
- *
- * See the getting started guide for more information
- * https://ai.google.dev/gemini-api/docs/get-started/node
- */
+let text;
+function gettext(){
+  var text_area = document.getElementById('code');
+  text = text_area.value;
+  console.log(text);
+}
 
-const {
-    GoogleGenerativeAI,
-    HarmCategory,
-    HarmBlockThreshold,
-  } = require("@google/generative-ai");
-  
-  const apiKey = process.env.GEMINI_API_KEY;
-  const genAI = new GoogleGenerativeAI(apiKey);
-  
-  const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-pro",
-  });
-  
-  const generationConfig = {
-    temperature: 1,
-    topP: 0.95,
-    topK: 64,
-    maxOutputTokens: 8192,
-    responseMimeType: "text/plain",
-  };
-  
-  async function run() {
-    const chatSession = model.startChat({
-      generationConfig,
-   // safetySettings: Adjust safety settings
-   // See https://ai.google.dev/gemini-api/docs/safety-settings
-      history: [
-      ],
-    });
-  
-    const result = await chatSession.sendMessage("capital of india");
-    console.log(result.response.text());
-  }
-  
+document.getElementById('sub').onclick = function() {
+  gettext();
   run();
+};
+
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const API_KEY = "";
+// Access your API key (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(API_KEY);
+
+async function run() {
+  // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+
+  const prompt = "\nwhat is the time complexity of the above program in 1 word"
+
+  const result = await model.generateContent( text + prompt);
+  const response = await result.response;
+  const output = response.text();
+  console.log(output);
+  alert(output)
+}
