@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script type="importmap">
-        {
-          "imports": {
-            "@google/generative-ai": "https://esm.run/@google/generative-ai"
-          }
-        }
-    </script>
-    <h2 id="heading">Time Complexity</h2>
-    <div class="container">
-        <textarea id="code" row="10">text here</textarea>
+   <div class="main">
+    <div class="head">
+        <h1 id="heading">Time Complexity Calculator</h3>
+        <hr>
+        <p id="msg" >Welcome to our time complexity calculator tool, u simple need to write the code in the code section and with the help of an AI it calculates the time compleity.</p>
     </div>
-    <div class="submit">
-        <button id="sub">Submit</button>
+    <div class="code_container">
+        <textarea id="code" rows=1000>#Write Code Here</textarea>
     </div>
-   <script type="module" src="script.js"></script>
+    <div class="button">
+            <button id="submit">Submit</button>
+    </div>
+
+    <div class="output">
+        <p id="answer"></p>
+    </div>
+    
+   </div>
+   <script src="script.js"></script>
+   <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+   <script src="app.js"></script>
 </body>
 </html>
