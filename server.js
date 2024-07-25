@@ -4,6 +4,8 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+const path = require('path');
+
 const { GoogleGenerativeAI  } = require("@google/generative-ai");
 const dotenv=require("dotenv");
 dotenv.config();
@@ -26,6 +28,12 @@ async function run(text) {
 // Middleware to parse incoming JSON requests
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/' , (req,res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+})
 
 app.post('/send-text', async (req, res) => {
     const { text } = req.body;
