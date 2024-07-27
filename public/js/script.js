@@ -1,4 +1,10 @@
 let text;
+let dictionary=new Object();
+dictionary["Constant"]="O(1)";
+dictionary["Linear"]="O(n)";
+dictionary["Logarithmic"]="O(log(n))";
+dictionary["Quadratic"]="O(n^2)";
+dictionary["Cubic"]="O(n^3)";
 function gettext(){
   var text_area = document.getElementById('code');
   text = text_area.value;
@@ -15,9 +21,10 @@ document.getElementById('submit').onclick = async function() {
         body: JSON.stringify({ text: text })
     });
 
-    const result = await response.text();
+    let result = await response.text();
+    result=String(result).trim();
     // alert(result);
-    document.getElementById('answer').innerHTML = `Time Complexity:${result}`;
+    document.getElementById('answer').innerHTML = `Time Complexity:${result} ${dictionary[result]}`;
   } catch (error) {
     console.error('Error sending text:', error);
   }
