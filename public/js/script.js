@@ -5,7 +5,6 @@ dictionary["Linear"]="O(n)";
 dictionary["Logarithmic"]="O(log(n))";
 dictionary["Quadratic"]="O(n^2)";
 dictionary["Cubic"]="O(n^3)";
-console.log(dictionary);
 function gettext(){
   var text_area = document.getElementById('code');
   text = text_area.value;
