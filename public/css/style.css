@@ -1,10 +1,10 @@
 *{
-    background-color:#2c4251;
+    background-color:#EDF4ED;
 }
 .main{
     display:block;
     height:1000px;
-    background-color:#0f2737;
+    background-color:#ABD1B5;
     position:absolute;
     left:50px;
     right:50px;
@@ -16,14 +16,14 @@
    text-align:center;
     border:1px solid black;
     border-radius:10px;
-    background-color:#8a8989;
+    background-color:#79B791;
 }
 
 #heading{
-    background-color:#8a8989;
+    background-color:#79B791;
 }
 #msg{
-    background-color:#8a8989;
+    background-color:#79B791;
     font-size:22px;
     color:black;
     font-weight: bold;
@@ -32,10 +32,10 @@
     margin-top:50px;
     text-align: center;
     height:600px;
-    background-color:#0f2737;
+    background-color:#ABD1B5;
 }
 textarea{
-    background-color:#1b3e56;
+    background-color:#FFFFFF;
     font-size:18px;
     height:95%;
     width:60%;
@@ -47,7 +47,7 @@ textarea{
     display:flex;
     justify-content:center; 
     height:40px;
-    background-color:#0f2737;
+    background-color:#ABD1B5;
 }
 #submit{
     height:100%;
@@ -64,10 +64,12 @@ textarea{
 .output{
     display:flex;
     justify-content:center;
-    height:400px;
+    align-items:center;
+    height:100px;
     width:100%;
-    background-color:#0f2737;
+    background-color:#ABD1B5;
 }
 #answer{
-    font-size:18px;
+    font-size:38px;
+    background-color:#ABD1B5;
 }

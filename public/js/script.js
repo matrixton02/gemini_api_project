@@ -16,8 +16,8 @@ document.getElementById('submit').onclick = async function() {
     });
 
     const result = await response.text();
-    alert(result);
-    document.getElementById('answer').innerHTML = result;
+    // alert(result);
+    document.getElementById('answer').innerHTML = `Time Complexity:${result}`;
   } catch (error) {
     console.error('Error sending text:', error);
   }
