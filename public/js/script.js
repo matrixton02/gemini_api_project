@@ -43,29 +43,8 @@ document.getElementById('submit').onclick = async function () {
     result = result.trim().toLowerCase(); // Normalize the response to match dictionary keys
     console.log(result);
 
-    let complexity = dictionary[result] || "Unknown Time Complexity"; // Default message if no match
-    if (complexity === "Unknown Time Complexity") {
-      try {
-        let complx_url = window.location.href + 'complexity';
-        const response = await fetch(complx_url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ text: result })
-        });
-
-        complexity = await response.text();
-
-        dictionary[result]=complexity;
-
-      } catch (error) {
-        console.error('Error sending text:', error);
-      }
-    }
-
     document.getElementById('loading-animation').className = '';
-    document.getElementById('answer').innerHTML = `Time Complexity: ${complexity}`;
+    document.getElementById('answer').innerHTML = `Time Complexity: ${result}`;
   } catch (error) {
     console.error('Error sending text:', error);
   }
