@@ -36,7 +36,7 @@ app.get('/' , (req,res)=>{
 app.post('/send-text', async (req, res) => {
     const { text } = req.body;
     console.log('Received text:', text);
-    const prompt = "\nwhat is the time complexity of the above program in 1 word"
+    const prompt = "\nwhat is the time complexity of the above code in big O notation just say the big O notation nothing else"
     const output =await run(text+prompt);
     res.send(" " + output);
 });
