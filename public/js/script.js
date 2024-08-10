@@ -1,23 +1,4 @@
 let text;
-let dictionary = {
-  "constant": "O(1)",
-  "linear": "O(n)",
-  "logarithmic": "O(log(n))",
-  "quadratic": "O(n^2)",
-  "cubic": "O(n^3)",
-  "n": "O(n)",
-  "log(n)": "O(log(n))",
-  "n^2": "O(n^2)",
-  "n^3": "O(n^3)",
-  "o(1)": "O(1)",
-  "o(n)": "O(n)",
-  "o(log(n))": "O(log(n))",
-  "o(n^2)": "O(n^2)",
-  "o(n^3)": "O(n^3)",
-  "exponential": "O(2^n)",
-  "loglinear": "O(n log(n))",
-  "o(n log n)":"O(n log(n))"
-};
 
 function gettext() {
   var text_area = document.getElementById('code');
