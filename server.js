@@ -15,11 +15,9 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function run(text) {
     // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro"});
   
-    const prompt = "\nwhat is the time complexity of the above program in 1 word"
-  
-    const result = await model.generateContent( text + prompt);
+    const result = await model.generateContent( text );
     const response = await result.response;
     const output = response.text();
     return output;
@@ -38,8 +36,16 @@ app.get('/' , (req,res)=>{
 app.post('/send-text', async (req, res) => {
     const { text } = req.body;
     console.log('Received text:', text);
-    const output =await run(text);
+    const prompt = "\nwhat is the time complexity of the above code in big O notation just say the big O notation nothing else"
+    const output =await run(text+prompt);
     res.send(" " + output);
+});
+
+app.post('/complexity', async (req,res) =>{
+    const { text } = req.body;
+    const prompt =`what is the big o notation of ${text} reply only the notation`
+    const output = await run(prompt);
+    res.send(" "+output);
 });
 
 app.listen(port, () => {
