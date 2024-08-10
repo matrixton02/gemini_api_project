@@ -29,22 +29,22 @@ What things you need to install the software and how to install them:
 A step-by-step guide to get a development environment running:
 
 1. Clone the repository:
-   \`\`\`sh
+   ```sh
    git clone https://github.com/matrixton02/gemini_api_project.git
    cd gemini_api_project
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`sh
+   ```sh
    npm install @google/generative-ai body-parser cors dotenv express path --save
-   \`\`\`
+   ```
 
 3. Set up environment variables:
-   Create a \`.env\` file in the root directory and add the following :
+   Create a `.env` file in the root directory and add the following :
    note you can get your gemini api by heading to https://ai.google.dev/aistudio and sign-in and click on "get api key" and copy that and put that value in between " " as shown below
-   \`\`\`
+   ```
    GEMINI_API_KEY = "AI..."
-   \`\`\`
+   ```
 
 4. Start the server:
    \`\`\`sh
@@ -59,8 +59,8 @@ Explain how to use the API, including code snippets, if necessary.
 
 A comprehensive list of API endpoints:
 
-- \`GET /api/example\` - Description of what this endpoint does.
-- \`POST /api/example\` - Description of what this endpoint does.
+- `GET /` - Lands you at the main home page of the program
+- `POST /send-text` - send request to the server which in turn sends request to the gemini ai servers and return a response 
 
 (Include detailed descriptions, request parameters, and example responses for each endpoint.)
 
@@ -69,14 +69,14 @@ A comprehensive list of API endpoints:
 If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (\`git checkout -b feature-branch\`).
+2. Create a new branch (`git checkout -b feature-branch`).
 3. Make your changes.
-4. Commit your changes (\`git commit -m 'Add some feature'\`).
-5. Push to the branch (\`git push origin feature-branch\`).
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
 6. Create a new Pull Request.
 
 ## Contact
 
-Maintained by [Soumyajyoti Mohanta & Yashasvi Kumar Tiwari](https://github.com/matrixton02).
+Maintained by [Soumyajyoti Mohanta](https://github.com/HelloSniperMonkey) & [Yashasvi Kumar Tiwari](https://github.com/matrixton02).
 
-For any queries, please contact soumyajyotimohanta@gmail.com .
+For any queries, please contact soumyajyotimohanta@gmail.com or yashasvikumartiwari@gmail.com.
