@@ -79,4 +79,4 @@ If you would like to contribute to this project, please follow these steps:
 
 Maintained by [Soumyajyoti Mohanta](https://github.com/HelloSniperMonkey) & [Yashasvi Kumar Tiwari](https://github.com/matrixton02).
 
-For any queries, please contact soumyajyotimohanta@gmail.com or yashasvi21022005@gamil.com.
+For any queries, please contact soumyajyotimohanta@gmail.com or yashasvi21022005@gmail.com.
